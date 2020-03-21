@@ -82,9 +82,9 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         dessertTimer = DessertTimer(this.lifecycle)
 
         if (savedInstanceState != null) {
-            revenue = savedInstanceState.getInt(KEY_REVENUE)
-            dessertsSold = savedInstanceState.getInt(KEY_DESSERT_SOLD)
-            dessertTimer.secondsCount = savedInstanceState.getInt(KEY_SECONDS_COUNT)
+            revenue = savedInstanceState.getInt(KEY_REVENUE, 0)
+            dessertsSold = savedInstanceState.getInt(KEY_DESSERT_SOLD, 0)
+            dessertTimer.secondsCount = savedInstanceState.getInt(KEY_SECONDS_COUNT, 0)
             showCurrentDessert()
         }
 
